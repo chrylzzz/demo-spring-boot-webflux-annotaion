@@ -36,8 +36,8 @@ public class UserController {
     @GetMapping("/index")
     public Flux<User> getAll() {
         return Flux.fromIterable(users.entrySet().stream()
-            .map(entry -> entry.getValue())
-            .collect(Collectors.toList()));
+                .map(entry -> entry.getValue())
+                .collect(Collectors.toList()));
     }
 
     /**
