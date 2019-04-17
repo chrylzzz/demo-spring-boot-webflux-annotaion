@@ -22,6 +22,7 @@ public class UserController {
 
     Map<Long, User> users = new HashMap<>();
 
+    //servlet加载时运行，@PostConstruct修饰的方法：在构造方法运行之后，init方法运行直线运行
     @PostConstruct
     public void init() throws Exception {
         users.put(Long.valueOf(1), new User(1, "Jack", "Smith", 20));
